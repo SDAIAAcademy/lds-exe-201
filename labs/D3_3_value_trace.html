@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 3.3 · تتبّع فرضية القيمة · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D3_3_value_trace.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day3.html#lab-3-3">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 3.3</span>
+<h1>تتبّع فرضية القيمة</h1>
+<p>تتبّع فرضية قيمة واحدة إلى بنود قائمة الدخل: تحسب خط الأساس لجدولة الشاحنات من سجلات 2025، وتحوّل كل محرك في الفرضية إلى ريالات في بنده، وتفصل الحالة الأساسية عن الإمكانات غير المؤكدة</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 3</span><span>الجلسة 3: من فرضية القيمة إلى قائمة الدخل</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="3.3">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>خط أساس لسنة 2025 لكل محرك في فرضية قيمة جدولة الشاحنات.</li>
+      <li>جدول تتبع: كل محرك بريالاته وبنده في قائمة الدخل، وما لا يُحسب ولماذا.</li>
+      <li>سطر القيمة لدراسة الجدوى: حالة أساسية، وإمكانات غير مؤكدة منفصلة.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/value_hypothesis_dispatch.txt" target="_blank"><b>value_hypothesis_dispatch.txt</b><span>فرضية القيمة بمحركاتها الستة</span></a>
+    <a href="files/dispatch_data_dictionary.txt" target="_blank"><b>dispatch_data_dictionary.txt</b><span>قاموس البيانات وثوابت الشركة</span></a>
+    <a href="files/dispatch_monthly_2025.csv" target="_blank"><b>dispatch_monthly_2025.csv</b><span>سجلات الجدولة الشهرية لكل محطة</span></a>
+    <a href="files/income_statement_fy2025.csv" target="_blank"><b>income_statement_fy2025.csv</b><span>قائمة الدخل لسنة 2025</span></a>
+    <a href="files/vendor_brochure_excerpt.txt" target="_blank"><b>vendor_brochure_excerpt.txt</b><span>ادعاء نشرة المورد</span></a>
+    <a href="files/value_trace_template.csv" target="_blank"><b>value_trace_template.csv</b><span>جدول التتبع</span></a>
+  </div>
+  <p class="small">البيانات اصطناعية. سياسة الذكاء الاصطناعي: ذكاء اصطناعي كامل على ما ليس مصنفًا: سجلات الجدولة وقائمة الدخل مصنفة «مقيد»، فاطلب من المساعد الصيغة بأسماء الأعمدة وحدها، وراجع كل مجموع بنفسك.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · اقرأ الفرضية وقاموس البيانات وقائمة الدخل <span class="min">4 د</span></h3>
+    <p>لكل محرك من الستة: أي عمود يقيسه، وأي بند في قائمة الدخل قد يحرّكه؟</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · احسب خط الأساس لسنة 2025 لكل محرك من السجلات <span class="min">8 د</span></h3>
+    <p>اجمع الأشهر الاثني عشر والمحطات السبع: الحمولات المرتجعة لتأخر الوصول (لا كل المرتجعة)، والكيلومترات الفارغة، وساعات العمل الإضافي، والطلبات المعتذر عنها.</p>
+    <div class="prompt" data-tool="مساعد ذكي">في ملف CSV أعمدته: <span class="ph">أسماء الأعمدة</span>. اكتب صيغة جدول بيانات تجمع العمود <span class="ph">اسم العمود</span> لكل الصفوف، دون أن تحسب الرقم بنفسك.</div>
+  </div>
+
+  <div class="step">
+    <h3>3 · حوّل المحركات الثلاثة الأولى إلى ريالات وبنودها <span class="min">8 د</span></h3>
+    <p>المحرك × التغيير المتوقع × الثابت من القاموس. لكل سطر اكتب رمز البند في قائمة الدخل.</p>
+    <table>
+      <tr><th>المحرك</th><th>خط الأساس</th><th>التغيير</th><th>الثابت</th><th>البند</th><th>ريال سنويًا</th></tr>
+      <tr><td>المرتجع لتأخر الوصول</td><td class="fill"></td><td>30%</td><td>1,600 للحمولة</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>الكيلومترات الفارغة</td><td class="fill"></td><td>8%</td><td>0.45 لتر × 1.66</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>العمل الإضافي</td><td class="fill"></td><td>10%</td><td>62 للساعة</td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>4 · احكم على المحركات الثلاثة الأخيرة: تُحسب أم لا، ولماذا <span class="min">7 د</span></h3>
+    <p>ثلاثة أسئلة لكل محرك: هل يتحرك بند في قائمة الدخل؟ هل هو محسوب في سطر آخر؟ هل هو مؤكد أم ممكن؟ ما يمكن ولا يتأكد يُكتب منفصلًا عن الحالة الأساسية.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · قارن رقمك بادعاء نشرة المورد، واكتب سطر القيمة لدراسة الجدوى <span class="min">8 د</span></h3>
+    <p>لو طُبقت الـ 15% على كل بنود الوقود في قائمة الدخل، كم تكون؟ ولماذا لا تصلح؟ ثم سطر القيمة: «الحالة الأساسية ... ريال سنويًا في البنود ...؛ وإمكانات غير مؤكدة ...».</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>احسب أثر تخفيض الحمولات المرتجعة 15% فقط بدل 30%، واكتب هل يبقى الاسترداد خلال 24 شهرًا.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>لماذا لا تُحسب ساعات الموزعين، وهي حقيقية؟</li>
+    <li>أين ذهب «توفير الإسمنت»؟</li>
+    <li>ما الدليل الذي يرفع الطلبات المعتذر عنها من الإمكانات إلى الحالة الأساسية؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>خط الأساس 2025:</b> مرتجع لتأخر الوصول 2,376 حمولة؛ كيلومترات فارغة 4,063,173؛ عمل إضافي 91,789 ساعة؛ طلبات معتذر عنها 1,978.</li>
+      <li><b>الحالة الأساسية:</b> COS-10 شطب المرتجع 1,140,480؛ COS-04 وقود الشاحنات 242,815؛ COS-07 العمل الإضافي 569,092. المجموع 1,952,387 ريالًا سنويًا.</li>
+      <li><b>لا يُحسب:</b> ساعات الموزعين (لا يتحرك بند ما لم تُخفض الوظائف أو يُعاد توزيع العمل بقرار؛ تُذكر قيمة غير مالية)؛ الإسمنت (داخل تكلفة الشطب في COS-10: حسابه ثانية عدّ مزدوج).</li>
+      <li><b>الإمكانات غير المؤكدة:</b> الطلبات المعتذر عنها × متوسط الأمتار للحمولة × هامش 61 ريالًا = 989,064 ريالًا، منفصلة عن الحالة الأساسية حتى يثبت أن العميل لم يذهب إلى منافس، وأن الشاحنة المحررة متاحة وقت الطلب.</li>
+      <li><b>ادعاء المورد:</b> 15% من كل الوقود (COS-04 و COS-05) = 2,567,100 ريال مقابل 242,815 من التتبع. النشرة بلا خط أساس ولا مجموعة مقارنة.</li>
+      <li><b>المحرك الأكبر:</b> المرتجع لتأخر الوصول؛ وهو أيضًا ما يُقاس في تجربة المحطة الواحدة.</li>
+      <li><b>الإضافي:</b> بتخفيض 15% تصبح الحالة الأساسية 1,382,147 ريالًا، ويسترد خيار الشراء (1,146,900) في نحو 19 شهرًا من الاعتماد: يبقى ضمن 24.</li>
+      <li>التحقق: <code>uv run labs/solutions/check.py 3.3</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D3_2_tco_condition.html" rel="prev">→ المختبر السابق</a><a href="D3_4_portfolio.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-18⁩ · الإيداع 22c48b3</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-18T02:12:10Z","version":"2027.1.0","commit":"22c48b3"},"course":{"id":"lds-exe-201","code":"LDS-EXE-201","title":"استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-201/","repo":"SDAIAAcademy/lds-exe-201","home":"../index.html"},"lab":{"id":"3.3","title":"تتبّع فرضية القيمة","summary":"تتبّع فرضية قيمة واحدة إلى بنود قائمة الدخل: تحسب خط الأساس لجدولة الشاحنات من سجلات 2025، وتحوّل كل محرك في الفرضية إلى ريالات في بنده، وتفصل الحالة الأساسية عن الإمكانات غير المؤكدة","minutes":35,"day":3,"unit":"اليوم 3","session":3,"deck":"../slides/day3.html#lab-3-3","prev":"D3_2_tco_condition.html","next":"D3_4_portfolio.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

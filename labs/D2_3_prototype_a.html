@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.3 · النموذج الأولي (أ): ترميز بلاغات السلامة · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_3_prototype_a.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-3">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.3</span>
+<h1>النموذج الأولي (أ): ترميز بلاغات السلامة</h1>
+<p>تختبر ادعاء أن نموذجًا مستضافًا يرمّز بلاغات السلامة: تقرأ معيار النجاح والإخفاق الحرج، وتشغّل البلاغات العشرة، وتصحح كل نتيجة بالمفتاح، وتكتب مذكرة الجدوى</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 2</span><span>الجلسة 3: النموذج الأولي اختبار لادعاء</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.3">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>نتائج نموذج مستضاف على عشرة بلاغات سلامة اصطناعية، مصححة بالمفتاح.</li>
+      <li>مذكرة جدوى: نسبة النجاح، وأنواع الإخفاق، والقرار بقاعدة مكتوبة قبل التشغيل.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/prototype_a/brief.txt" target="_blank"><b>prototype_a/brief.txt</b><span>التعليمات ومعيار النجاح وقاعدة القرار</span></a>
+    <a href="files/prototype_a/cases.csv" target="_blank"><b>prototype_a/cases.csv</b><span>البلاغات العشرة والإجابات المتوقعة</span></a>
+    <a href="files/prototype_a/results_template.csv" target="_blank"><b>prototype_a/results_template.csv</b><span>ورقة النتائج</span></a>
+    <a href="files/feasibility_note_template.txt" target="_blank"><b>feasibility_note_template.txt</b><span>قالب مذكرة الجدوى</span></a>
+  </div>
+  <p class="small">نموذج مستضاف (مفتوح الأوزان أو مساعد تجاري يقبل الملفات). سياسة الذكاء الاصطناعي: ذكاء اصطناعي كامل. البلاغات اصطناعية ومدخلات الحالة مصنفة «عام»؛ لا تضع أي بلاغ حقيقي من جهتك.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · اقرأ التعليمات ومعيار النجاح وقاعدة القرار <span class="min">4 د</span></h3>
+    <p>القاعدة مكتوبة قبل التشغيل، ولا تتغير بعده: مضيّ إذا نجح 8 من 10 فأكثر دون إخفاق حرج؛ إعادة عمل من 5 إلى 7 أو مع إخفاق حرج له علاج؛ توقف تحت 5. الإخفاق الحرج: بلاغ درجته 3 صُنف أقل.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · افتح النموذج المستضاف، أو شغّل السجل المسجَّل إن لم يتوفر <span class="min">4 د</span></h3>
+    <p>من يعمل بالبرنامج: اضبط <code>LLM_BASE_URL</code> و<code>LLM_MODEL</code> و<code>LLM_API_KEY</code> من وثائق مزودك، ثم:</p>
+    <pre class="code" data-file="الطرفية"><code>uv run labs/prototype/run_cases.py a</code></pre>
+    <p>دون مفتاح يعيد البرنامج تشغيل سجل مسجَّل (مخرجات مكتوبة بسيناريو، لا مخرجات نموذج)، ويقول ذلك في كل سطر.</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · شغّل البلاغات العشرة، وانقل النتائج إلى ورقة النتائج <span class="min">10 د</span></h3>
+    <div class="prompt" data-tool="نموذج مستضاف">أنت تساعد مسؤول السلامة في شركة خرسانة. التعليمات: <span class="ph">نص brief.txt</span>. البلاغ: <span class="ph">نص البلاغ</span>. أجب بسطر JSON واحد فقط بالمفاتيح: hazard, severity, plant, stop</div>
+    <p>شغّل كل بلاغ في محادثة جديدة، أو كلها في رسالة واحدة مع طلب سطر لكل بلاغ؛ واكتب أيهما فعلت.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · صحح كل بلاغ بالمفتاح، وعلّم الإخفاق الحرج <span class="min">7 د</span></h3>
+    <p>البلاغ ناجح إذا صحت الحقول الأربعة كلها. لكل إخفاق: أي حقل، وما السبب المرجح.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · اكتب مذكرة الجدوى: النسبة وأنواع الإخفاق والقرار <span class="min">10 د</span></h3>
+    <p>استعمل القالب. في البند 6 اكتب ما لا تقوله عشر حالات: كم يمكن أن تكون النسبة الحقيقية أدنى مما رأيت؟</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>أعد تشغيل البلاغين الفاشلين مرتين، واكتب هل يتكرر الخطأ نفسه أم يتغير.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>هل وقع إخفاق حرج؟ وماذا كانت ستقول القاعدة لو وقع؟</li>
+    <li>أي إخفاق يعالَج بسطر في التعليمات، وأيه يحتاج مراجعة بشرية دائمة؟</li>
+    <li>من سيراجع ماذا لو مضت الحالة إلى التشغيل؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>السجل المسجَّل:</b> 8 من 10؛ لا إخفاق حرجًا. A04: المحطة «الياسمين» (موقع العميل) بدل M03؛ A09: «بيئة العمل» بدل «انسكاب ومواد كيميائية» (الانسكاب قرب المصرف).</li>
+      <li><b>القرار المرجعي:</b> مضيّ، بشرطين: سطر في التعليمات يحصر المحطة في الرموز M01 إلى M07، ومراجعة مسؤول السلامة لعينة أسبوعية ولكل بلاغ درجته 3.</li>
+      <li><b>عدم اليقين:</b> فترة ويلسون 95% لـ 8 من 10 من 49% إلى 94%. القرار يستند إلى القاعدة المكتوبة، والفترة سبب لتوسيع الحالات في أول شهر تشغيل.</li>
+      <li><b>نتائج النموذج الحقيقي</b> تختلف من مشارك لآخر ومن نموذج لآخر: اطلب أن تُكتب الأرقام كما ظهرت، وناقش الفروق في المراجعة.</li>
+      <li>التحقق: <code>uv run labs/solutions/check.py 2.3</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D2_2_filters_owners.html" rel="prev">→ المختبر السابق</a><a href="D2_4_prototype_b.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-18⁩ · الإيداع 22c48b3</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-18T02:12:10Z","version":"2027.1.0","commit":"22c48b3"},"course":{"id":"lds-exe-201","code":"LDS-EXE-201","title":"استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-201/","repo":"SDAIAAcademy/lds-exe-201","home":"../index.html"},"lab":{"id":"2.3","title":"النموذج الأولي (أ): ترميز بلاغات السلامة","summary":"تختبر ادعاء أن نموذجًا مستضافًا يرمّز بلاغات السلامة: تقرأ معيار النجاح والإخفاق الحرج، وتشغّل البلاغات العشرة، وتصحح كل نتيجة بالمفتاح، وتكتب مذكرة الجدوى","minutes":35,"day":2,"unit":"اليوم 2","session":3,"deck":"../slides/day2.html#lab-2-3","prev":"D2_2_filters_owners.html","next":"D2_4_prototype_b.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

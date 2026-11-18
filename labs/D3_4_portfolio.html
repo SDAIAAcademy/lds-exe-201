@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 3.4 · المحفظة ضمن الموازنة · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D3_4_portfolio.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day3.html#lab-3-4">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 3.4</span>
+<h1>المحفظة ضمن الموازنة</h1>
+<p>تبدأ من الفرز ومذكرات الجدوى المرجعية، فتختار حالات المحفظة وترتبها على ثلاثة آفاق ضمن موازنة 7.5 مليون ريال وسقوفها السنوية، وتضع لكل حالة بوابة ومعيار توقف، وتبدأ صفحة العرض على لجنة الاستثمار</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 3</span><span>الجلسة 4: الآفاق وبوابات التمويل ومعايير التوقف</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="3.4">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>محفظة مرتبة على ثلاثة آفاق ضمن موازنة 7.5 مليون ريال وسقوفها السنوية.</li>
+      <li>بوابة تمويل ومعيار توقف رقمي لكل حالة.</li>
+      <li>سطر القرار الذي تطلبه من لجنة الاستثمار، وهو بداية المشروع الختامي.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/portfolio_candidates.csv" target="_blank"><b>portfolio_candidates.csv</b><span>اثنا عشر مرشحًا بتكاليفها وقيمها واعتمادياتها</span></a>
+    <a href="files/portfolio_budget.txt" target="_blank"><b>portfolio_budget.txt</b><span>الموازنة والسقوف والآفاق وقاعدة الاسترداد</span></a>
+    <a href="files/triage_start_reference.csv" target="_blank"><b>triage_start_reference.csv</b><span>أنماط الفرز المرجعية</span></a>
+    <a href="files/feasibility_note_template.txt" target="_blank"><b>feasibility_note_template.txt</b><span>قالب مذكرة الجدوى، لمراجعة النموذجين</span></a>
+  </div>
+  <p class="small">يبدأ المختبر من ملفات مرجعية، فلا يحتاج نتائج مختبراتك السابقة. المبالغ بآلاف الريالات. سياسة الذكاء الاصطناعي: ذكاء اصطناعي كامل على ما ليس مصنفًا: الموازنة والمرشحون مصنفة «مقيد»، فلا تلصقها في أي مساعد؛ يمكنك أن تطلب منه هيكل صفحة العرض أو صيغة جمع السنوات.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · اقرأ المرشحين والموازنة وقاعدة الاسترداد <span class="min">4 د</span></h3>
+    <p>لاحظ عمودي <code>depends_on</code> و<code>earliest_live_month</code>: حالة لا تعمل قبل أساسها.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · استبعد ما لا يعبر المرشِّحات، واكتب السبب <span class="min">6 د</span></h3>
+    <p>المرشِّحات من اليوم 2: فئة المخاطر، والتصنيف مع الأداة التوليدية، والمالك وتصميم الإشراف للحالة عالية المخاطر.</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · رتّب الباقي على الآفاق الثلاثة بحسب الاعتماديات <span class="min">8 د</span></h3>
+    <table>
+      <tr><th>الأفق 1 (0 إلى 6 أشهر)</th><th>الأفق 2 (7 إلى 18)</th><th>الأفق 3 (19 إلى 36)</th></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>4 · تحقق من السقوف السنوية، وعدّل حتى تتسع <span class="min">7 د</span></h3>
+    <p>اجمع تكاليف كل سنة لما اخترته وقارنها بالسقف: 3,000 ثم 2,700 ثم 2,500. إن تجاوزت فأخّر حالة أو أخرجها، واكتب أيها ولماذا.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · اكتب لكل حالة بوابة ومعيار توقف <span class="min">6 د</span></h3>
+    <p>البوابة: الدليل المطلوب قبل الدفعة التالية، ومن يقدمه. معيار التوقف: رقم ومدة، مثل «إن لم ينخفض كذا X% خلال Y أشهر نتوقف».</p>
+  </div>
+
+  <div class="step">
+    <h3>6 · اكتب سطر القرار الذي تطلبه من اللجنة <span class="min">4 د</span></h3>
+    <p>جملة واحدة: ما تعتمده اللجنة اليوم، وبكم، وما تراه في البوابة الأولى. ليس قائمة مبادرات.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>أعد المحفظة بموازنة أقل 20%، واكتب ما يخرج أولًا ولماذا.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>لماذا يقع أساس البيانات في الأفق 1 وقيمته المباشرة صفر؟</li>
+    <li>ما الحالة الأعلى قيمة التي لم تدخل، ولماذا؟</li>
+    <li>أي بوابة في محفظتك يمكن أن تُغلق فعلًا؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>محفظة مرجعية (إجابة يمكن الدفاع عنها، لا الوحيدة):</b> الأفق 1: F01، F02، UC01. الأفق 2: UC03، UC04، UC19، UC02. الأفق 3: UC09، UC12.</li>
+      <li><b>التكاليف:</b> 2,912 ثم 1,132 ثم 1,213، المجموع 5,257 من 7,500. إضافة UC17 ترفع السنة الأولى إلى 3,312 فتتجاوز السقف.</li>
+      <li><b>المستبعد:</b> UC11 (توليدي على مدخلات مقيدة، واستخدامه الجاري مخالف لسياسة الشركة)؛ UC10 (عالي المخاطر؛ اقترح الفرز في 2.2 مالكًا له، لكن ورقة المرشحين لا تسمّي له مالكًا ولا تصميم إشراف، فلا يُموَّل حتى يُستكمل الاثنان)؛ UC17 (أعلى قيمة، لكنه لا يتسع مع الأساس والجدولة؛ يعاد في مراجعة السنة الثانية).</li>
+      <li><b>الاسترداد:</b> UC03 بتكلفة ثلاث سنوات 1,147 والحالة الأساسية 1,952 سنويًا يسترد في نحو 16 شهرًا من الاعتماد (تسعة أشهر حتى التشغيل ونحو سبعة بعدها)، ضمن قاعدة 24 شهرًا.</li>
+      <li><b>بوابة جيدة لـ UC03:</b> تجربة محطة واحدة شهرًا مع عقد استضافة محلية وتصدير السجل؛ التوقف إذا لم ينخفض المرتجع لتأخر الوصول في المحطة 15% على الأقل مقارنة بالأشهر نفسها من 2025 بعد ثلاثة أشهر تشغيل.</li>
+      <li><b>بوابة زائفة:</b> «اكتمال التركيب» أو «رضا المستخدمين»: لا تقول هل تحركت القيمة.</li>
+      <li>التحقق: <code>uv run labs/solutions/check.py 3.4</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D3_3_value_trace.html" rel="prev">→ المختبر السابق</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-18⁩ · الإيداع 22c48b3</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-18T02:12:10Z","version":"2027.1.0","commit":"22c48b3"},"course":{"id":"lds-exe-201","code":"LDS-EXE-201","title":"استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-201/","repo":"SDAIAAcademy/lds-exe-201","home":"../index.html"},"lab":{"id":"3.4","title":"المحفظة ضمن الموازنة","summary":"تبدأ من الفرز ومذكرات الجدوى المرجعية، فتختار حالات المحفظة وترتبها على ثلاثة آفاق ضمن موازنة 7.5 مليون ريال وسقوفها السنوية، وتضع لكل حالة بوابة ومعيار توقف، وتبدأ صفحة العرض على لجنة الاستثمار","minutes":35,"day":3,"unit":"اليوم 3","session":4,"deck":"../slides/day3.html#lab-3-4","prev":"D3_3_value_trace.html","next":null,"alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

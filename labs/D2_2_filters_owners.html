@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.2 · المرشِّحات والمالكون · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_2_filters_owners.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.2</span>
+<h1>المرشِّحات والمالكون</h1>
+<p>الجزء الثاني من الفرز: فئة المخاطر والتصنيف، ومالك وتصميم إشراف لكل حالة عالية المخاطر، وحكم على الوكيل</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 2</span><span>الجلسة 2: المرشِّحات: الأثر والتصنيف والمخاطر والمالك</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.2">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>مصفوفة فرز كاملة: لكل حالة فئة مخاطرها، وعلامة الذكاء الاصطناعي التوليدي على مدخلات مقيدة، ومالك وتصميم إشراف للحالات عالية المخاطر.</li>
+      <li>حكم على صلاحية الوكيل في الحالة UC25.</li>
+      <li>ملخص الفرز في خمسة أسطر.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/triage_start_reference.csv" target="_blank"><b>triage_start_reference.csv</b><span>الغموض والمخاطر والأنماط المرجعية، إن لم تكمل 2.1</span></a>
+    <a href="files/usecases_25.csv" target="_blank"><b>usecases_25.csv</b><span>الحالات بحقولها، ومنها تصنيف المدخلات</span></a>
+    <a href="files/triage_rules.txt" target="_blank"><b>triage_rules.txt</b><span>المرشِّحات الأربعة</span></a>
+    <a href="files/owners.csv" target="_blank"><b>owners.csv</b><span>المالكون المتاحون</span></a>
+    <a href="files/systems_list.csv" target="_blank"><b>systems_list.csv</b><span>تصنيف كل نظام</span></a>
+  </div>
+  <p class="small">ابدأ من مصفوفتك من المختبر 2.1، أو من الملف المرجعي. سياسة الذكاء الاصطناعي: مساعد مرشد مسموح، ولا يُلصق فيه شيء من الملفات المصنفة.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · افتح مصفوفتك أو المرجعية، واقرأ المرشِّحات الأربعة <span class="min">3 د</span></h3>
+    <p>المرشِّحات لا تغيّر المربع؛ تقرر هل تُموَّل الحالة، وبأي صيغة، وبأي شرط.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · أسند فئة المخاطر لكل حالة، واستبعد غير المقبولة <span class="min">8 د</span></h3>
+    <p>الفئات في مبادئ أخلاقيات الذكاء الاصطناعي: بسيطة أو منعدمة، ومحدودة، وعالية، وغير مقبولة. العالية: ما يمس الحقوق الأساسية للأفراد أو سلامتهم. غير المقبولة: ما يشكل خطرًا غير مقبول على سلامة الناس وسبل عيشهم وحقوقهم.</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · علّم كل حالة توليدية مدخلاتها «مقيد» أو أعلى، واقترح لها صيغة بديلة <span class="min">8 د</span></h3>
+    <p>انظر إلى عمودي <code>technique</code> و<code>input_classification</code> معًا. الصيغة البديلة: إزالة المحتوى المقيد، أو تقنية غير توليدية، أو إبقاؤها خارج المحفظة.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · سمِّ مالكًا من قائمة المالكين وتصميم إشراف لكل حالة عالية المخاطر <span class="min">8 د</span></h3>
+    <p>المالك شخص يملك القرار الذي تمسه الحالة، لا مدير تقنية المعلومات بالضرورة. تصميم الإشراف جملة: من يراجع، وماذا، ومتى، وماذا يحدث عند الخلاف.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · احكم على الوكيل في الحالة UC25 بالشروط الثلاثة <span class="min">4 د</span></h3>
+    <table>
+      <tr><th>الشرط</th><th>متحقق؟</th><th>الدليل</th></tr>
+      <tr><td>بيئة يعمل فيها</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>سياق كامل لما يحتاجه</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>نتيجة يمكن التحقق منها قبل أن تؤثر</td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>6 · اكتب ملخص الفرز: عدد كل نمط، وما يُستبعد، وما ينتظر مالكًا <span class="min">4 د</span></h3>
+    <p>خمسة أسطر لمديرة الاستراتيجية: الأعداد، والمستبعد وسببه، والحالات التوليدية التي تحتاج صيغة بديلة، والحالات عالية المخاطر ومالكوها.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>قدّر خطرًا واحدًا لحالة عالية المخاطر بمصفوفة الإطار الوطني (الاحتمالية × الأثر)، واكتب مستواه.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>أي حالة تحمل علامة التصنيف وهي مستخدمة الآن فعلًا في الشركة؟</li>
+    <li>لماذا لا يلغي الإشرافُ البشري العلامةَ على حالة توليدية مدخلاتها مقيدة؟</li>
+    <li>من يملك UC19، ولماذا ليس مدير تقنية المعلومات؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>غير مقبولة:</b> UC08 (تقدير صدق المتقدمين من تعابير الوجه) تُستبعد ولا يُصمم لها ضابط.</li>
+      <li><b>توليدي على مدخلات مقيدة أو سرية (9):</b> UC05، UC07، UC11، UC13، UC14، UC15، UC20، UC22، UC25. UC11 مستخدمة الآن فعلًا (I06، I08): مخالفة جارية. صيغ بديلة: UC05 و UC14 قراءة آلية غير توليدية؛ UC11 و UC20 قوالب دون أسعار أو مبالغ؛ UC15 و UC22 خارج المحفظة.</li>
+      <li><b>عالية المخاطر ومالكوها (8):</b> UC06 سديم الرقيب؛ UC07 مدير الموارد البشرية (شاغر، يغطيه الرئيس التنفيذي: نقطة للنقاش)؛ UC10 مشاري الهرقان؛ UC12 و UC17 حصة الطاسان؛ UC19 فواز المقرن؛ UC21 و UC25 مشاري الهرقان.</li>
+      <li><b>UC25:</b> البيئة جزئية (لا نسخة تجريبية من الجدول)، والسياق ناقص (الرسالة لا تحمل حالة المحطة ولا الشاحنات)، والنتيجة لا يُتحقق منها قبل أن تغيّر الجدول، والمدخلات مقيدة: لا وكيل؛ القيادة للإنسان.</li>
+      <li><b>الخطأ الشائع:</b> اعتبار الحالات التوليدية المستضافة داخليًا مستثناة. سياسة الشركة تشمل الأدوات المستضافة لها.</li>
+      <li>التحقق: <code>uv run labs/solutions/check.py 2.2</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D2_1_triage_matrix.html" rel="prev">→ المختبر السابق</a><a href="D2_3_prototype_a.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-18⁩ · الإيداع 22c48b3</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-18T02:12:10Z","version":"2027.1.0","commit":"22c48b3"},"course":{"id":"lds-exe-201","code":"LDS-EXE-201","title":"استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-201/","repo":"SDAIAAcademy/lds-exe-201","home":"../index.html"},"lab":{"id":"2.2","title":"المرشِّحات والمالكون","summary":"الجزء الثاني من الفرز: فئة المخاطر والتصنيف، ومالك وتصميم إشراف لكل حالة عالية المخاطر، وحكم على الوكيل","minutes":35,"day":2,"unit":"اليوم 2","session":2,"deck":"../slides/day2.html#lab-2-2","prev":"D2_1_triage_matrix.html","next":"D2_3_prototype_a.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

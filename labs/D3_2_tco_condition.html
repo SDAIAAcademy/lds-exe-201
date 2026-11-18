@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 3.2 · التكلفة والمصفوفة والشرط · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D3_2_tco_condition.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day3.html#lab-3-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 3.2</span>
+<h1>التكلفة والمصفوفة والشرط</h1>
+<p>الجزء الثاني من المقارنة: تحسب التكلفة الإجمالية لثلاث سنوات لكل خيار مع البنود المخفية، وتكمل المصفوفة الموزونة، وتكتب الشرط الذي يتوقف عليه الاختيار</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 3</span><span>الجلسة 2: التكلفة الإجمالية والخروج</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="3.2">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>التكلفة الإجمالية للملكية على ثلاث سنوات لكل خيار، بالبنود التي لا تذكرها الأوراق.</li>
+      <li>مصفوفة موزونة كاملة، واختيار، والشرط الذي ينقلب الاختيار إذا تغيّر.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/option_scores_reference.csv" target="_blank"><b>option_scores_reference.csv</b><span>درجات المرجع من 3.1، إن لم تكمله</span></a>
+    <a href="files/option_build.txt" target="_blank"><b>option_build.txt</b><span>ورقة البناء</span></a>
+    <a href="files/option_buy.txt" target="_blank"><b>option_buy.txt</b><span>ورقة الشراء</span></a>
+    <a href="files/option_partner.txt" target="_blank"><b>option_partner.txt</b><span>ورقة الشراكة</span></a>
+    <a href="files/tco_template.csv" target="_blank"><b>tco_template.csv</b><span>جدول التكلفة</span></a>
+    <a href="files/option_matrix_template.csv" target="_blank"><b>option_matrix_template.csv</b><span>المصفوفة والأوزان</span></a>
+    <a href="files/option_scoring_guide.txt" target="_blank"><b>option_scoring_guide.txt</b><span>دليل التقييم</span></a>
+  </div>
+  <p class="small">ابدأ من درجاتك في 3.1 أو من الملف المرجعي. سياسة الذكاء الاصطناعي: ذكاء اصطناعي كامل على ما ليس مصنفًا: اطلب من المساعد صيغ الجدول، ولا تلصق فيه أوراق الخيارات ولا أسعارها (مصنفة «مقيد»). راجع كل رقم بنفسك.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · انقل بنود كل ورقة إلى جدول التكلفة <span class="min">6 د</span></h3>
+    <p>كل بند في سطر: لمرة واحدة أو سنوي، ومصدره. الاشتراك الشهري للشراء: لكل شاحنة × عدد الشاحنات × 12، وأضف زيادة الاستضافة المحلية.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · أضف البنود التي لا تذكرها الأوراق ومصدر كل منها <span class="min">7 د</span></h3>
+    <p>ابحث عن ثلاثة: ما يلزم كل خيار ولم تذكره إلا ورقة واحدة، وما يحتاجه الناس ليعملوا بالنظام الجديد، وما تدفعه الشركة إذا خرجت.</p>
+    <table>
+      <tr><th>البند</th><th>الخيار</th><th>المبلغ</th><th>من أين قدّرته</th></tr>
+      <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>3 · احسب التكلفة الإجمالية لثلاث سنوات ودرجتها <span class="min">6 د</span></h3>
+    <p>التكلفة = ما يُدفع لمرة واحدة + 3 × السنوي. الدرجة من الدليل: الأقل 5، ودرجة أقل لكل 15% فوقه.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · أكمل المصفوفة الموزونة بدرجاتك من المختبر 3.1 أو المرجعية <span class="min">6 د</span></h3>
+    <p>المجموع = مجموع (الوزن × الدرجة)، من 500. اكتب الاختيار، والفارق بينه وبين الثاني.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · غيّر افتراضًا واحدًا حتى ينقلب الاختيار، واكتبه شرطًا <span class="min">10 د</span></h3>
+    <p>جرّب الافتراضات واحدًا واحدًا: الاستضافة المحلية، وسعر الاشتراك، ووقت البناء. الشرط جملة واحدة: «نختار ... بشرط ...؛ وإن لم يتحقق نختار ...».</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>احسب التكلفة الإجمالية على خمس سنوات بدل ثلاث، واكتب هل يتغير الترتيب ولماذا.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>أي بند مخفي يرفع تكلفة الشراء أكثر من غيره؟</li>
+    <li>لماذا ليست الاستضافة المحلية «تفصيلًا تعاقديًا» في هذه الحالة؟</li>
+    <li>ما الدليل الذي تحتاجه اللجنة لتعتمد الشرط؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>البنود المخفية:</b> تنظيف البيانات 180,000 (لكل خيار، ولم تذكره إلا ورقة البناء)؛ إدارة التغيير وتدريب الموزعين والسائقين 90,000 (لكل خيار)؛ الخروج من الشراء 180,000 (رسم الإنهاء 60,000 وإعادة بناء السجل التاريخي 120,000). وربط الشراء الخاص 140,000 من ملاحظة تقنية المعلومات.</li>
+      <li><b>التكلفة لثلاث سنوات:</b> البناء 2,960,000؛ الشراء 1,146,900 (اشتراك سنوي 132,300 مع الاستضافة المحلية)؛ الشراكة 1,670,000. الدرجات: 1، 5، 2.</li>
+      <li><b>المجاميع من 500:</b> البناء 325، الشراء 350، الشراكة 340. الاختيار: الشراء، بفارق 10 نقاط فقط.</li>
+      <li><b>الشرط:</b> دون الاستضافة المحلية تهبط ملاءمة الشراء إلى 1 والتحكم في البيانات إلى 1، فيصبح مجموعه 260 وتفوز الشراكة (340). والفارق الصغير يعني أن تغييرًا صغيرًا آخر يقلب الاختيار: لو تأخر وقت الشراء حتى القيمة إلى 6 أشهر (درجة 4) يصبح 335 وتفوز الشراكة؛ ولو أثبتت تجربة المحطة الواحدة الربط الخاص يصعد الشراء إلى 380. «نشتري بشرط أن تبقى بيانات المواقع داخل المملكة بعقد؛ وإلا فالشراكة.»</li>
+      <li><b>ملاحظة:</b> الارتهان 1 في الشراء يبقى. البوابة في المحفظة يجب أن تطلب تصدير السجل بعقد، أو تقبل تكلفة الخروج صراحة. التفاصيل التعاقدية في المقرر LDS-EXE-205.</li>
+      <li>التحقق: <code>uv run labs/solutions/check.py 3.2</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D3_1_option_sheets.html" rel="prev">→ المختبر السابق</a><a href="D3_3_value_trace.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-18⁩ · الإيداع 22c48b3</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-18T02:12:10Z","version":"2027.1.0","commit":"22c48b3"},"course":{"id":"lds-exe-201","code":"LDS-EXE-201","title":"استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-201/","repo":"SDAIAAcademy/lds-exe-201","home":"../index.html"},"lab":{"id":"3.2","title":"التكلفة والمصفوفة والشرط","summary":"الجزء الثاني من المقارنة: تحسب التكلفة الإجمالية لثلاث سنوات لكل خيار مع البنود المخفية، وتكمل المصفوفة الموزونة، وتكتب الشرط الذي يتوقف عليه الاختيار","minutes":35,"day":3,"unit":"اليوم 3","session":2,"deck":"../slides/day3.html#lab-3-2","prev":"D3_1_option_sheets.html","next":"D3_3_value_trace.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

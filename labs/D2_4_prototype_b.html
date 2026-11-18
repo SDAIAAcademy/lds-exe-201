@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.4 · النموذج الأولي (ب): أسئلة المقاولين · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_4_prototype_b.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-4">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.4</span>
+<h1>النموذج الأولي (ب): أسئلة المقاولين</h1>
+<p>تختبر النموذج الثاني على عشرة أسئلة فنية من دليل المنتجات، وتصنف إخفاقاته، ثم تكتب مذكرة جدوى لكل من النموذجين بقرارها وشرط تغييره</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 2</span><span>الجلسة 4: أنواع الإخفاق وقرار المضي</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.4">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>نتائج نموذج مستضاف على عشرة أسئلة فنية من مقاولين، مصححة بالمرجع ومصنفة الإخفاقات.</li>
+      <li>مذكرتا جدوى للنموذجين الأوليين (أ) و(ب)، لكل منهما قرار وشرط تغييره.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/prototype_b/product_guide.txt" target="_blank"><b>prototype_b/product_guide.txt</b><span>دليل المنتجات الاصطناعي</span></a>
+    <a href="files/prototype_b/brief.txt" target="_blank"><b>prototype_b/brief.txt</b><span>معيار النجاح والإخفاق الحرج وقاعدة القرار</span></a>
+    <a href="files/prototype_b/questions.csv" target="_blank"><b>prototype_b/questions.csv</b><span>الأسئلة العشرة والإجابات المرجعية</span></a>
+    <a href="files/prototype_b/results_template.csv" target="_blank"><b>prototype_b/results_template.csv</b><span>ورقة النتائج</span></a>
+    <a href="files/feasibility_note_template.txt" target="_blank"><b>feasibility_note_template.txt</b><span>قالب مذكرة الجدوى</span></a>
+  </div>
+  <p class="small">نموذج مستضاف. سياسة الذكاء الاصطناعي: ذكاء اصطناعي كامل. الدليل منشور ومصنف «عام»، والأسئلة اصطناعية. لا يحتاج المختبر نتيجة 2.3: لمذكرة النموذج (أ) استعمل نتيجتك أو السجل المسجَّل <code>labs/prototype/recorded/run_a.json</code>.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · اقرأ الدليل ومعيار النجاح والإخفاق الحرج <span class="min">4 د</span></h3>
+    <p>الإخفاق الحرج هنا: رقم مختلق يتعلق بالسلامة أو المعالجة، أو إجابة عن سؤال تصميم إنشائي بدل إحالته.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · شغّل الأسئلة العشرة، أو السجل المسجَّل إن لم يتوفر النموذج <span class="min">8 د</span></h3>
+    <div class="prompt" data-tool="نموذج مستضاف">أنت تكتب مسودة إجابة لمهندس المبيعات، من الدليل التالي وحده. لا تضف أي رقم ليس في الدليل. إذا كان السؤال عن التصميم الإنشائي فلا تجب عنه وأحل السائل إلى المهندس الإنشائي المسؤول عن مشروعه. الدليل: <span class="ph">نص product_guide.txt</span>. سؤال المقاول: <span class="ph">السؤال</span>. المسودة في جملتين على الأكثر:</div>
+    <pre class="code" data-file="الطرفية"><code>uv run labs/prototype/run_cases.py b</code></pre>
+  </div>
+
+  <div class="step">
+    <h3>3 · صحح كل إجابة بالمرجع، وصنّف كل إخفاق بنوعه <span class="min">8 د</span></h3>
+    <table>
+      <tr><th>النوع</th><th>علامته</th></tr>
+      <tr><td>رقم مختلق</td><td>رقم ليس في الدليل، أو رقم من الدليل في غير موضعه</td></tr>
+      <tr><td>خارج النطاق دون إحالة</td><td>أجاب عما كان يجب أن يحيله</td></tr>
+      <tr><td>استرجاع خاطئ</td><td>نقل فقرة قريبة وأغفل الشرط الذي يغيّر الجواب</td></tr>
+      <tr><td>خلط قاعدتين</td><td>طبّق قاعدة عامة على حالة لها قاعدة خاصة</td></tr>
+    </table>
+    <p>البرنامج ينبّه إلى الأرقام التي ليست في الدليل، لكنه لا يرى رقمًا من الدليل وُضع في غير موضعه: اقرأ بنفسك.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · احسب النسبة واكتب ما لا تقوله عشر حالات <span class="min">5 د</span></h3>
+    <p>اكتب النسبة وعدد الإخفاقات الحرجة، ثم جملة عن مدى اليقين في عشر حالات.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · اكتب مذكرتي الجدوى للنموذجين، ولكل منهما قرار وشرط تغييره <span class="min">10 د</span></h3>
+    <p>القرار بالقاعدة المكتوبة، والشرط جملة: «يتغير القرار إلى ... إذا ...». هاتان المذكرتان دليل الناتج الثالث.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>أضف إلى التعليمات سطرًا واحدًا يعالج أكثر الإخفاقات خطرًا، وأعد تشغيل الأسئلة الأربعة الفاشلة.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>أي إخفاق لم ينبّه إليه البرنامج، ولماذا؟</li>
+    <li>لماذا لا يكفي أن «يراجع المهندس كل إجابة» علاجًا للإخفاق الحرج؟</li>
+    <li>ما الذي يجب أن تراه في الجولة الثانية لتغيّر القرار إلى «مضيّ»؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>السجل المسجَّل:</b> 6 من 10. B01 رقم مختلق «3 أيام» (حرج؛ والبرنامج لا ينبّه لأن الرقم 3 موجود في الدليل في فقرة أخرى)؛ B04 أجاب عن سؤال إنشائي (حرج)؛ B08 استرجاع خاطئ أغفل الرماد المتطاير (10 أيام)؛ B10 خلط قاعدة 24 ساعة بقاعدة 72 ساعة للخلطة C50.</li>
+      <li><b>القرار المرجعي للنموذج (ب):</b> إعادة عمل: الإخفاقان الحرجان لهما علاج واضح (قاعدة إحالة صريحة بقائمة الموضوعات الإنشائية، وإلزام الاقتباس الحرفي للرقم من الفقرة)، ثم جولة ثانية على عشرين سؤالًا منها الأربعة الفاشلة. فترة ويلسون 95% لـ 6 من 10 من 31% إلى 83%.</li>
+      <li><b>النموذج (أ):</b> مضيّ بشرطين (المختبر 2.3).</li>
+      <li><b>لماذا لا تكفي مراجعة المهندس:</b> المراجع يثق بالمسودة مع الوقت؛ والإخفاق الحرج يُعالج في التصميم أولًا، ثم تبقى المراجعة.</li>
+      <li>التحقق: <code>uv run labs/solutions/check.py 2.4</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D2_3_prototype_a.html" rel="prev">→ المختبر السابق</a><a href="D3_1_option_sheets.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-18⁩ · الإيداع 22c48b3</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-18T02:12:10Z","version":"2027.1.0","commit":"22c48b3"},"course":{"id":"lds-exe-201","code":"LDS-EXE-201","title":"استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-201/","repo":"SDAIAAcademy/lds-exe-201","home":"../index.html"},"lab":{"id":"2.4","title":"النموذج الأولي (ب): أسئلة المقاولين","summary":"تختبر النموذج الثاني على عشرة أسئلة فنية من دليل المنتجات، وتصنف إخفاقاته، ثم تكتب مذكرة جدوى لكل من النموذجين بقرارها وشرط تغييره","minutes":35,"day":2,"unit":"اليوم 2","session":4,"deck":"../slides/day2.html#lab-2-4","prev":"D2_3_prototype_a.html","next":"D3_1_option_sheets.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.1 · فرز 25 حالة على المصفوفة · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_1_triage_matrix.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.1</span>
+<h1>فرز 25 حالة على المصفوفة</h1>
+<p>الجزء الأول من فرز حالات الاستخدام الخمس والعشرين: تضع كل حالة على مصفوفة الغموض والمخاطر، وتسند نمطها، وتكتب مبرر التصنيف في جملة</p>
+<div class="meta"><span>35 دقيقة</span><span>اليوم 2</span><span>الجلسة 1: الغموض والمخاطر وأنماطها الأربعة</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.1">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>مصفوفة فيها حالات الاستخدام الخمس والعشرون، لكل منها تقدير للغموض والمخاطر ونمط.</li>
+      <li>مبرر في جملة لكل تصنيف، يستطيع غيرك مراجعته.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/usecases_25.csv" target="_blank"><b>usecases_25.csv</b><span>الحالات الخمس والعشرون بحقول البطاقة</span></a>
+    <a href="files/triage_rules.txt" target="_blank"><b>triage_rules.txt</b><span>المحوران والأنماط الأربعة والمرشِّحات</span></a>
+    <a href="files/triage_template.csv" target="_blank"><b>triage_template.csv</b><span>قالب المصفوفة</span></a>
+  </div>
+  <p class="small">يبدأ المختبر من القائمة الكاملة، فلا يحتاج نتيجة المختبر 1.4. سياسة الذكاء الاصطناعي: مساعد مرشد مسموح، يسألك ولا يقترح النمط. المرشِّحات (الأعمدة الأخيرة في القالب) تُملأ في المختبر 2.2.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · اقرأ قواعد الفرز وبطاقات الحالات الخمس والعشرين <span class="min">5 د</span></h3>
+    <p>اقرأ الوصف والتقنية ومن يتأثر لكل حالة. لا تحكم بعد.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · قدّر الغموض لكل حالة بسؤال المعيار المكتوب <span class="min">9 د</span></h3>
+    <p>السؤال: هل يوجد معيار مكتوب يحدد الجواب الصحيح، ويتفق عليه أهل الخبرة؟ نعم = منخفض. يحتاج موازنة أو حكمًا يُختلف فيه = مرتفع.</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · قدّر المخاطر لكل حالة بسؤال العاقبة والتراجع <span class="min">9 د</span></h3>
+    <p>السؤال: إذا أخطأ النظام، من يتضرر، وهل يُكتشف الخطأ ويُصحح بتكلفة صغيرة؟ سلامة أو حقوق أفراد أو قرار مالي عن طرف آخر أو صعوبة تراجع = مرتفع.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · أسند النمط، واكتب المبرر في جملة لكل حالة <span class="min">7 د</span></h3>
+    <table>
+      <tr><th></th><th>مخاطر منخفضة</th><th>مخاطر مرتفعة</th></tr>
+      <tr><th>غموض منخفض</th><td>الأتمتة</td><td>الإدارة بضوابط حماية</td></tr>
+      <tr><th>غموض مرتفع</th><td>إتاحة الاستكشاف</td><td>إبقاء القيادة للإنسان</td></tr>
+    </table>
+    <p>المبرر يذكر سبب الغموض وسبب المخاطر معًا: «الجواب في كذا، والخطأ يكلف كذا».</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · قارن خمس حالات مع زميل، وسجّل سبب كل خلاف <span class="min">5 د</span></h3>
+    <p>اختارا خمس حالات مختلفة الإدارات. الخلاف المفيد يكون على السؤال لا على النمط: هل اختلفتما في الغموض أم في المخاطر؟</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>اطلب من مساعد ذكي، بصفته مرشدًا، أن يسألك عن أضعف ثلاثة مبررات كتبتها، دون أن يقترح النمط.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>أي حالتين وضعتهما في المربع نفسه لسببين مختلفين؟</li>
+    <li>لماذا لا يجعل وجود البيانات الغموضَ منخفضًا بالضرورة؟</li>
+    <li>أي حالة أحرجتك: تريد تمويلها ووضعتها في «إبقاء القيادة للإنسان»؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>الأتمتة (7):</b> UC01، UC04، UC05، UC09، UC14، UC16، UC18.</li>
+      <li><b>الإدارة بضوابط حماية (6):</b> UC02، UC03، UC12، UC19، UC21، UC24.</li>
+      <li><b>إتاحة الاستكشاف (6):</b> UC11، UC13، UC15، UC20، UC22، UC23.</li>
+      <li><b>إبقاء القيادة للإنسان (6):</b> UC06، UC07، UC08، UC10، UC17، UC25. (UC08 يُستبعد في المختبر 2.2 بمرشِّح فئة المخاطر.)</li>
+      <li><b>الخلافات المعتادة:</b> UC02 (من يراه منخفض المخاطر لأن الدليل منشور: لكن خطأ في المعالجة يضر المبنى)؛ UC19 (من يراه غامضًا: الترتيب يُقاس بالسداد الفعلي، والمخاطر في قرار الإيقاف)؛ UC05 و UC14 في الأتمتة هنا، وسيوقفهما مرشِّح التصنيف في 2.2.</li>
+      <li>المفتاح الكامل بمبرراته في <code>labs/_tools/prepare_files.py</code> (<code>TRIAGE_KEY</code>)، والتحقق: <code>uv run labs/solutions/check.py 2.1</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="D1_4_usecase_sources.html" rel="prev">→ المختبر السابق</a><a href="D2_2_filters_owners.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-18⁩ · الإيداع 22c48b3</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-18T02:12:10Z","version":"2027.1.0","commit":"22c48b3"},"course":{"id":"lds-exe-201","code":"LDS-EXE-201","title":"استراتيجية الذكاء الاصطناعي ومحفظة حالات الاستخدام","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-201/","repo":"SDAIAAcademy/lds-exe-201","home":"../index.html"},"lab":{"id":"2.1","title":"فرز 25 حالة على المصفوفة","summary":"الجزء الأول من فرز حالات الاستخدام الخمس والعشرين: تضع كل حالة على مصفوفة الغموض والمخاطر، وتسند نمطها، وتكتب مبرر التصنيف في جملة","minutes":35,"day":2,"unit":"اليوم 2","session":1,"deck":"../slides/day2.html#lab-2-1","prev":"D1_4_usecase_sources.html","next":"D2_2_filters_owners.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>
