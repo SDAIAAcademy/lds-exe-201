@@ -110,6 +110,8 @@ AI Strategy and Use-Case Portfolio
 
 سطور المختبرات في البطاقة، بترتيبها: تقييم نضج الشركة (المختبران 1.2 و1.3)؛ فرز 25 حالة على مصفوفة الغموض والمخاطر (2.1 و2.2)؛ نموذجان أوليان على نموذج مستضاف وعشر حالات لكل منهما (2.3 و2.4)؛ تقييم خيارات البناء والشراء والشراكة لحالة واحدة (3.1 و3.2)؛ تتبع فرضية قيمة واحدة إلى بنود قائمة الدخل (3.3). المختبرات 1.1 و1.4 و3.4 أضافها المقرر لموضوعات البطاقة: القيمة والاستبيانات، ومصادر حالات الاستخدام، والآفاق وبوابات التمويل.
 
+**العمل التحضيري الموجه (90 دقيقة قبل اليوم الأول).** (1) افتح `labs/files/ai_dashboard.csv` و`labs/files/board_memo.txt` في جدول البيانات وتأكد أن العربية مقروءة، واقرأ وصف الحالة أعلاه (20 دقيقة). (2) اقرأ من إطار تبني الذكاء الاصطناعي على صفحته الرسمية الركائز الثلاث والمكونات السبعة، واكتب لكل مكون سؤالًا واحدًا تسأله في جهتك (40 دقيقة). (3) جهّز وصولك إلى نموذج مستضاف، أو شغّل `uv run labs/prototype/run_cases.py a --recorded --no-save` لتتأكد أن السجل المسجَّل يعمل على جهازك (30 دقيقة). لا ترفع أي وثيقة من جهتك إلى أي أداة.
+
 **النماذج الأولية.** يشغّل المشارك الحالات العشر في نموذج مستضاف من اختياره، أو بالبرنامج `labs/prototype/run_cases.py` مع أي واجهة متوافقة مع OpenAI يحدد عنوانها ونموذجها ومفتاحها في متغيرات البيئة. إن لم يتوفر نموذج، يعيد البرنامج تشغيل سجل مسجَّل في `labs/prototype/recorded/`، وهو مخرجات مكتوبة بسيناريو لا مخرجات نموذج. الأرقام في شرائح المراجعة بعد المختبرين 2.3 و2.4 من هذا السجل المسجَّل.
 
 **المقياس والقواعد من وضع المقرر.** مقياس النضج من 0 إلى 4 وقواعد الدليل، وقواعد الفرز وربط الأنماط الأربعة بالمربعات، ودليل تقييم الخيارات، والموازنة والآفاق: كلها أدوات المقرر، لا معايير وطنية. إطار تبني الذكاء الاصطناعي يحدد المكونات السبعة ولا يحدد مستويات نضج. مرشِّح المخاطر في الفرز هو فئات المخاطر الأربع في مبادئ أخلاقيات الذكاء الاصطناعي؛ ومصفوفة الاحتمالية والأثر في الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي تُستعمل لتقدير مخاطر حالة بعينها بعد الفرز، ولا يُخلط بين الاثنين.
@@ -136,7 +138,7 @@ AI Strategy and Use-Case Portfolio
 ### المرجعيات الوطنية
 
 - [إطار تبني الذكاء الاصطناعي (سدايا، SDAIA-P121)](https://sdaia.gov.sa/ar/SDAIA/about/Files/AIAdoptionFramework.pdf)
-- [مبادئ أخلاقيات الذكاء الاصطناعي (سدايا، SDAIA-P114)](https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf)
+- [مبادئ أخلاقيات الذكاء الاصطناعي (سدايا)](https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf)
 - [الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي، النص العربي (سدايا، أبريل 2026)](https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf)
 - [National AI Risk Management Framework, executive summary (SDAIA-P145EN, April 2026)](https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryEn.pdf)
 - [المبادئ التوجيهية للذكاء الاصطناعي التوليدي للجهات الحكومية (سدايا)](https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf)
@@ -156,6 +158,6 @@ AI Strategy and Use-Case Portfolio
 ### المرجعيات الوطنية
 
 - إطار تبني الذكاء الاصطناعي الصادر عن سدايا (SDAIA-P121): https://sdaia.gov.sa/ar/SDAIA/about/Files/AIAdoptionFramework.pdf (الإنجليزية: https://sdaia.gov.sa/en/SDAIA/about/Files/AIAdoptionFramework.pdf). يحدد ثلاث ركائز وسبعة مكونات، ولا يحدد مستويات نضج.
-- مبادئ أخلاقيات الذكاء الاصطناعي الصادرة عن سدايا (SDAIA-P114E للإنجليزية، وSDAIA-P114 للعربية): https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf (الإنجليزية: https://sdaia.gov.sa/en/SDAIA/about/Documents/ai-principles.pdf). تصنف مخاطر أنظمة الذكاء الاصطناعي في أربع فئات: بسيطة أو منعدمة، ومحدودة، وعالية، وغير مقبولة.
+- مبادئ أخلاقيات الذكاء الاصطناعي الصادرة عن سدايا (SDAIA-P114E): https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf (الإنجليزية: https://sdaia.gov.sa/en/SDAIA/about/Documents/ai-principles.pdf). تصنف مخاطر أنظمة الذكاء الاصطناعي في أربع فئات: بسيطة أو منعدمة، ومحدودة، وعالية، وغير مقبولة.
 - الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي (SDAIA-P145EN، أبريل 2026): النص العربي https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf والملخص التنفيذي الإنجليزي https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryEn.pdf. إطار استرشادي للجهات الحكومية والخاصة؛ مستوى الخطر فيه حاصل ضرب الاحتمالية (1 إلى 4) في الأثر (1 إلى 4).
 - المبادئ التوجيهية للذكاء الاصطناعي التوليدي للجهات الحكومية، وسياسة تصنيف البيانات: في قائمة المصادر أعلاه؛ تستند إليهما قاعدة الشركة الافتراضية.
