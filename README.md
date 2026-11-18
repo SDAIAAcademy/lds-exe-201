@@ -5,7 +5,7 @@ AI Strategy and Use-Case Portfolio
 
 مسار التنفيذيين والقادة · أكاديمية سدايا · LDS-EXE-201 · المستوى 200
 
-REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك فعله بعد المقرر
+تقيس نضج الجهة بالدليل، وتفرز حالات الاستخدام بحسب الغموض والمخاطر، وتختبر الجدوى على حالات واقعية، ثم تموّل محفظة تتتبع قيمتها حتى قائمة الدخل
 
 يبني المشاركون استراتيجية للذكاء الاصطناعي ومحفظة لحالات الاستخدام لجهة افتراضية، انطلاقًا من سجلات اصطناعية للاستراتيجية والعمليات والبيانات المالية. فيقيّمون نضجها، ويفرزون حالات الاستخدام بحسب الغموض والمخاطر، ويبنون نموذجين أوليين لحالتين مرشحتين على نماذج مستضافة لاختبار جدواهما، ويختارون بين البناء أو الشراء أو الشراكة، ويتتبعون القيمة المتوقعة حتى الحسابات المالية. والمشروع الختامي محفظة ودراستا جدوى يدافع عنهما المشارك أمام لجنة استثمار تجريبية.
 
@@ -29,10 +29,10 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 
 | الوحدة | العنوان | الجلسات | الشرائح |
 |---|---|---|---|
-| اليوم 1 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1; REPLACE: عنوان الجلسة 2; REPLACE: عنوان الجلسة 3; REPLACE: عنوان الجلسة 4 | [`slides/day1.html`](slides/day1.html) |
-| اليوم 2 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1; REPLACE: عنوان الجلسة 2; REPLACE: عنوان الجلسة 3; REPLACE: عنوان الجلسة 4 | [`slides/day2.html`](slides/day2.html) |
-| اليوم 3 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1; REPLACE: عنوان الجلسة 2; REPLACE: عنوان الجلسة 3; REPLACE: عنوان الجلسة 4 | [`slides/day3.html`](slides/day3.html) |
-| المشروع الختامي | عروض المشروع الختامي |  | [`slides/capstone.html`](slides/capstone.html) |
+| اليوم 1 | القيمة والنضج | القيمة تأتي من إعادة تصميم العمل; النضج يُقاس بالدليل; البيانات قيد المحفظة المعتاد; من أين تأتي حالات الاستخدام | [`slides/day1.html`](slides/day1.html) |
+| اليوم 2 | الفرز والجدوى | الغموض والمخاطر وأنماطها الأربعة; المرشِّحات: الأثر والتصنيف والمخاطر والمالك; النموذج الأولي اختبار لادعاء; أنواع الإخفاق وقرار المضي | [`slides/day2.html`](slides/day2.html) |
+| اليوم 3 | الخيارات والقيمة والمحفظة | البناء أو الشراء أو الشراكة; التكلفة الإجمالية والخروج; من فرضية القيمة إلى قائمة الدخل; الآفاق وبوابات التمويل ومعايير التوقف | [`slides/day3.html`](slides/day3.html) |
+| المشروع الختامي | مناقشة المحافظ أمام لجنة الاستثمار |  | [`slides/capstone.html`](slides/capstone.html) |
 <!-- /academy:units -->
 
 ## دراسة الحالة
@@ -46,18 +46,18 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 
 | | الجلسة | المختبر | الملف |
 |---|---|---|---|
-| 1.1 | اليوم 1 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 1.1 | [`D1_1.html`](labs/D1_1.html) |
-| 1.2 | اليوم 1 · الجلسة 2 | REPLACE: ما يبنيه المشاركون في المختبر 1.2 | [`D1_2.html`](labs/D1_2.html) |
-| 1.3 | اليوم 1 · الجلسة 3 | REPLACE: ما يبنيه المشاركون في المختبر 1.3 | [`D1_3.html`](labs/D1_3.html) |
-| 1.4 | اليوم 1 · الجلسة 4 | REPLACE: ما يبنيه المشاركون في المختبر 1.4 | [`D1_4.html`](labs/D1_4.html) |
-| 2.1 | اليوم 2 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 2.1 | [`D2_1.html`](labs/D2_1.html) |
-| 2.2 | اليوم 2 · الجلسة 2 | REPLACE: ما يبنيه المشاركون في المختبر 2.2 | [`D2_2.html`](labs/D2_2.html) |
-| 2.3 | اليوم 2 · الجلسة 3 | REPLACE: ما يبنيه المشاركون في المختبر 2.3 | [`D2_3.html`](labs/D2_3.html) |
-| 2.4 | اليوم 2 · الجلسة 4 | REPLACE: ما يبنيه المشاركون في المختبر 2.4 | [`D2_4.html`](labs/D2_4.html) |
-| 3.1 | اليوم 3 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 3.1 | [`D3_1.html`](labs/D3_1.html) |
-| 3.2 | اليوم 3 · الجلسة 2 | REPLACE: ما يبنيه المشاركون في المختبر 3.2 | [`D3_2.html`](labs/D3_2.html) |
-| 3.3 | اليوم 3 · الجلسة 3 | REPLACE: ما يبنيه المشاركون في المختبر 3.3 | [`D3_3.html`](labs/D3_3.html) |
-| 3.4 | اليوم 3 · الجلسة 4 | REPLACE: ما يبنيه المشاركون في المختبر 3.4 | [`D3_4.html`](labs/D3_4.html) |
+| 1.1 | اليوم 1 · الجلسة 1 | تبنٍّ أم قيمة؟ | [`D1_1_adoption_or_value.html`](labs/D1_1_adoption_or_value.html) |
+| 1.2 | اليوم 1 · الجلسة 2 | تقييم النضج: التوجهات والممكنات | [`D1_2_maturity_part1.html`](labs/D1_2_maturity_part1.html) |
+| 1.3 | اليوم 1 · الجلسة 3 | تقييم النضج: المخرجات والفجوات الثلاث | [`D1_3_maturity_part2.html`](labs/D1_3_maturity_part2.html) |
+| 1.4 | اليوم 1 · الجلسة 4 | بطاقات من أربعة مصادر | [`D1_4_usecase_sources.html`](labs/D1_4_usecase_sources.html) |
+| 2.1 | اليوم 2 · الجلسة 1 | فرز 25 حالة على المصفوفة | [`D2_1_triage_matrix.html`](labs/D2_1_triage_matrix.html) |
+| 2.2 | اليوم 2 · الجلسة 2 | المرشِّحات والمالكون | [`D2_2_filters_owners.html`](labs/D2_2_filters_owners.html) |
+| 2.3 | اليوم 2 · الجلسة 3 | النموذج الأولي (أ): ترميز بلاغات السلامة | [`D2_3_prototype_a.html`](labs/D2_3_prototype_a.html) |
+| 2.4 | اليوم 2 · الجلسة 4 | النموذج الأولي (ب): أسئلة المقاولين | [`D2_4_prototype_b.html`](labs/D2_4_prototype_b.html) |
+| 3.1 | اليوم 3 · الجلسة 1 | تقييم الخيارات الثلاثة | [`D3_1_option_sheets.html`](labs/D3_1_option_sheets.html) |
+| 3.2 | اليوم 3 · الجلسة 2 | التكلفة والمصفوفة والشرط | [`D3_2_tco_condition.html`](labs/D3_2_tco_condition.html) |
+| 3.3 | اليوم 3 · الجلسة 3 | تتبّع فرضية القيمة | [`D3_3_value_trace.html`](labs/D3_3_value_trace.html) |
+| 3.4 | اليوم 3 · الجلسة 4 | المحفظة ضمن الموازنة | [`D3_4_portfolio.html`](labs/D3_4_portfolio.html) |
 <!-- /academy:labs -->
 
 ## المشروع الختامي
@@ -83,7 +83,23 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 <!-- academy:sources -->
 ## المصادر
 
-- REPLACE: كل مصدر يستشهد به المقرر مع عنوانه، في course.json ضمن "sources"؛ هذه القائمة تُكتب من هناك
+### المرجعيات الوطنية
+
+- [إطار تبني الذكاء الاصطناعي (سدايا، SDAIA-P121)](https://sdaia.gov.sa/ar/SDAIA/about/Files/AIAdoptionFramework.pdf)
+- [مبادئ أخلاقيات الذكاء الاصطناعي (سدايا، SDAIA-P114)](https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf)
+- [الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي (سدايا، أبريل 2026، SDAIA-P145)](https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf)
+- [المبادئ التوجيهية للذكاء الاصطناعي التوليدي للجهات الحكومية (سدايا)](https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf)
+- [سياسة تصنيف البيانات (مكتب إدارة البيانات الوطنية)](https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataClassificationPolicyAr.pdf)
+
+### الفرز والوكلاء
+
+- [MIT Sloan: A framework for determining when AI can make decisions (MIT CISR, 2026)](https://mitsloan.mit.edu/ideas-made-to-matter/a-framework-determining-when-ai-can-make-decisions)
+- [Anthropic: Building effective agents (2024)](https://www.anthropic.com/engineering/building-effective-agents)
+
+### ملحق الأرقام المؤرخة (نوفمبر 2026)
+
+- [BCG: AI Adoption in 2024: 74% of Companies Struggle to Achieve and Scale Value (24 أكتوبر 2024)](https://www.bcg.com/press/24october2024-ai-adoption-in-2024-74-of-companies-struggle-to-achieve-and-scale-value)
+- [U.S. Census Bureau: Tracking Firm Use of AI in Real Time (CES-WP-24-16)](https://www.census.gov/library/working-papers/2024/adrm/CES-WP-24-16.html)
 <!-- /academy:sources -->
 
 ### المرجعيات الوطنية

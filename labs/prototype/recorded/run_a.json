@@ -1,0 +1,95 @@
+{
+ "note": "Scripted stand-in outputs written by labs/_tools/prepare_files.py; not produced by a model.",
+ "runs": [
+  {
+   "case_id": "A01",
+   "output": {
+    "hazard": "سقوط من ارتفاع",
+    "severity": 3,
+    "plant": "M02",
+    "stop": "نعم"
+   }
+  },
+  {
+   "case_id": "A02",
+   "output": {
+    "hazard": "مركبات ومرور",
+    "severity": 2,
+    "plant": "M05",
+    "stop": "لا"
+   }
+  },
+  {
+   "case_id": "A03",
+   "output": {
+    "hazard": "انسكاب ومواد كيميائية",
+    "severity": 1,
+    "plant": "M01",
+    "stop": "لا"
+   }
+  },
+  {
+   "case_id": "A04",
+   "output": {
+    "hazard": "معدات وآلات",
+    "severity": 2,
+    "plant": "الياسمين",
+    "stop": "لا"
+   }
+  },
+  {
+   "case_id": "A05",
+   "output": {
+    "hazard": "بيئة العمل",
+    "severity": 2,
+    "plant": "M06",
+    "stop": "لا"
+   }
+  },
+  {
+   "case_id": "A06",
+   "output": {
+    "hazard": "كهرباء",
+    "severity": 3,
+    "plant": "M04",
+    "stop": "نعم"
+   }
+  },
+  {
+   "case_id": "A07",
+   "output": {
+    "hazard": "مركبات ومرور",
+    "severity": 3,
+    "plant": "M07",
+    "stop": "نعم"
+   }
+  },
+  {
+   "case_id": "A08",
+   "output": {
+    "hazard": "بيئة العمل",
+    "severity": 1,
+    "plant": "M02",
+    "stop": "لا"
+   }
+  },
+  {
+   "case_id": "A09",
+   "output": {
+    "hazard": "بيئة العمل",
+    "severity": 2,
+    "plant": "M01",
+    "stop": "لا"
+   }
+  },
+  {
+   "case_id": "A10",
+   "output": {
+    "hazard": "معدات وآلات",
+    "severity": 1,
+    "plant": "M05",
+    "stop": "لا"
+   }
+  }
+ ]
+}

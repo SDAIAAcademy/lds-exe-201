@@ -34,3 +34,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 /*.log
+
+# Results the prototype runner writes while a participant works
+labs/prototype/runs/
