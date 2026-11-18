@@ -84,7 +84,11 @@ def lab_2_1_2():
     modes = {}
     for k, v in P.TRIAGE_KEY.items():
         modes.setdefault(v[2], []).append(k)
-    print('2.1 modes:', {m: len(v) for m, v in modes.items()})
+    quads = {}
+    for k, v in P.TRIAGE_KEY.items():
+        quads[(v[0], v[1])] = quads.get((v[0], v[1]), 0) + 1
+    print('2.1 quadrants (ambiguity, risk), before the filters:', quads)
+    print('2.2 modes after the filters:', {m: len(v) for m, v in modes.items()})
     for k, (amb, risk, mode, cat, owner, flag, note) in P.TRIAGE_KEY.items():
         quad = {('منخفض', 'منخفض'): 'أتمتة', ('منخفض', 'مرتفع'): 'إدارة بضوابط حماية',
                 ('مرتفع', 'منخفض'): 'إتاحة الاستكشاف', ('مرتفع', 'مرتفع'): 'إبقاء القيادة للإنسان'}[(amb, risk)]
@@ -119,6 +123,8 @@ def lab_2_3():
 
 
 def lab_2_4():
+    lo7, hi7 = wilson(7, 10)
+    print(f'2.4 slide example 7/10: Wilson 95% {lo7:.1%} to {hi7:.1%}')
     passed = sum(1 for v in P.PROTO_B_RUN.values() if v[1] == 'pass')
     crit = [k for k, v in P.PROTO_B_RUN.items() if v[1] == 'fail' and v[3] == 'نعم']
     lo, hi = wilson(passed, 10)
@@ -148,8 +154,8 @@ def scores(local_hosting=True):
         if opt == 'buy' and local_hosting:
             met = (sum(P.OPTION_FIT[opt][q] for q in musts) + 1) / len(musts)  # Q09 met by the paid local region
         fit = 5 if met == 1 else 4 if met >= .9 else 3 if met >= .8 else 2 if met >= .7 else 1
-        if opt in ('build', 'partner'):
-            fit -= 1  # "can be met", no prototype yet
+        if any(q in musts for q in P.OPTION_UNPROVEN[opt]):
+            fit -= 1  # "can be met", no customer and no prototype yet (buy: Q04 by a quoted custom integration)
         cost = max(1, 5 - floor((t[opt] / low - 1) / 0.15 + 1e-9))
         data = {'build': 5, 'buy': 4 if local_hosting else 1, 'partner': 4}[opt]
         lock = {'build': 5, 'buy': 1, 'partner': 3}[opt]
@@ -168,6 +174,8 @@ def lab_3_1_2():
     print('3.2 TCO three years (SAR):', t)
     print('3.2 weighted totals out of 500:', {k: v['total'] for k, v in s.items()})
     print('3.2 without local hosting:', {k: v['total'] for k, v in s_off.items()})
+    assert {k: v['total'] for k, v in s.items()} == {'build': 325, 'buy': 350, 'partner': 340}
+    assert {k: v['total'] for k, v in s_off.items()} == {'build': 325, 'buy': 260, 'partner': 340}
     assert max(s, key=lambda k: s[k]['total']) == 'buy'
     assert max(s_off, key=lambda k: s_off[k]['total']) == 'partner'
     print('3.2 condition: buy only if driver location data stay in the Kingdom by contract; otherwise partner')

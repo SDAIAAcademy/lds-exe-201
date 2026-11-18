@@ -528,6 +528,15 @@ OPTION_FIT = {  # requirement -> met? per option (build, buy, partner), from the
     'partner': {'Q01': 1, 'Q02': 1, 'Q03': 1, 'Q04': 1, 'Q05': 1, 'Q06': 1, 'Q07': 1, 'Q08': 1, 'Q09': 1, 'Q10': 1, 'Q11': 0, 'Q12': 1},
 }
 
+# Requirements counted in the ratio that are only "can be met" (no customer, no trial yet): one
+# grade off the fit score. Build and partner promise everything; buy reads Q04 from our ERP only
+# through a custom integration that is quoted, not built.
+OPTION_UNPROVEN = {
+    'build': [q[0] for q in REQUIREMENTS],
+    'buy': ['Q04'],
+    'partner': [q[0] for q in REQUIREMENTS],
+}
+
 OPTION_SHEETS = {
     'option_build.txt': """
 ورقة الخيار (1): البناء داخليًا · أسعار تقديرية بالريال · وثيقة اصطناعية للتدريب
@@ -746,7 +755,7 @@ avg_site_wait_min: متوسط انتظار الشاحنة في موقع العم
                                            'cost_y1', 'cost_y2', 'cost_y3', 'value_low_per_year', 'value_high_per_year',
                                            'earliest_live_month'], PORTFOLIO)
     write_csv('option_scores_reference.csv', ['criterion', 'build', 'buy', 'partner', 'evidence'], [
-        ('ملاءمة القدرات', 4, 3, 4, 'البناء والشراكة: كل الضروري ممكن ولم يُثبت (خصم درجة)؛ الشراء: 8 من 10 ضرورية مع الاستضافة المحلية'),
+        ('ملاءمة القدرات', 4, 2, 4, 'البناء والشراكة: كل الضروري ممكن ولم يُثبت (خصم درجة)؛ الشراء: 8 من 10 ضرورية مع الاستضافة المحلية، و Q04 ممكن فقط بربط خاص مسعَّر لم يُبنَ (خصم درجة)'),
         ('التحكم في البيانات', 5, 4, 4, 'الشراء بالاستضافة المحلية المدفوعة؛ دونها 1'),
         ('الارتهان والخروج', 5, 1, 3, 'الشراء: تصدير جزئي ورسم إنهاء؛ الشراكة: حق الشيفرة بشرط'),
         ('الوقت حتى القيمة', 2, 5, 4, '10 أشهر، 4 أشهر، 6 أشهر'),
