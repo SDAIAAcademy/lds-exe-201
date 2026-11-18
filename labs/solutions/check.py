@@ -199,6 +199,10 @@ def lab_3_3():
     print('3.3 not counted: dispatcher hours (no line moves), cement (inside COS-10), declined orders upside', v['upside'])
     print('3.3 vendor 15% applied to all fuel would claim', vendor, 'versus', v['v_fuel'])
     assert v['base'] == 1952387, v['base']
+    half = v['base'] - v['v_returns'] / 2
+    pb_half = 9 + tco()['buy'] / (half / 12)
+    print(f'3.3 stretch: returns down 15% only gives {half:,.0f} a year; buy pays back in about {pb_half:.0f} months')
+    assert half == 1382147 and pb_half < 24
     assert lines['COS-10'] == round(sum(int(r['returned_loads']) for r in rows('dispatch_monthly_2025.csv')) * 1.6)
 
 
