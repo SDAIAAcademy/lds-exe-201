@@ -676,6 +676,9 @@ def main():
     write_csv('triage_template.csv', ['id', 'ambiguity', 'risk', 'mode', 'rationale', 'ethics_risk_category',
                                       'genai_on_restricted', 'owner', 'oversight_design', 'agent_suitable'],
               [(u[0], '', '', '', '', '', '', '', '', '') for u in UC])
+    write_csv('triage_start_reference.csv', ['id', 'ambiguity', 'risk', 'mode', 'ethics_risk_category',
+                                             'genai_on_restricted', 'owner', 'oversight_design', 'agent_suitable'],
+              [(k, v[0], v[1], v[2] if v[2] != 'مستبعد' else 'إبقاء القيادة للإنسان', '', '', '', '', '') for k, v in TRIAGE_KEY.items()])
     write_text('prototype_a/brief.txt', PROTO_A_BRIEF)
     write_csv('prototype_a/cases.csv', ['case_id', 'report_text', 'expected_hazard', 'expected_severity', 'expected_plant', 'expected_stop'], PROTO_A_CASES)
     write_csv('prototype_a/results_template.csv', ['case_id', 'model_hazard', 'model_severity', 'model_plant', 'model_stop', 'pass', 'failure_type', 'critical'],
@@ -738,6 +741,12 @@ avg_site_wait_min: متوسط انتظار الشاحنة في موقع العم
     write_csv('portfolio_candidates.csv', ['id', 'title', 'mode', 'ethics_risk_category', 'owner', 'depends_on',
                                            'cost_y1', 'cost_y2', 'cost_y3', 'value_low_per_year', 'value_high_per_year',
                                            'earliest_live_month'], PORTFOLIO)
+    write_csv('option_scores_reference.csv', ['criterion', 'build', 'buy', 'partner', 'evidence'], [
+        ('ملاءمة القدرات', 4, 3, 4, 'البناء والشراكة: كل الضروري ممكن ولم يُثبت (خصم درجة)؛ الشراء: 8 من 10 ضرورية مع الاستضافة المحلية'),
+        ('التحكم في البيانات', 5, 4, 4, 'الشراء بالاستضافة المحلية المدفوعة؛ دونها 1'),
+        ('الارتهان والخروج', 5, 1, 3, 'الشراء: تصدير جزئي ورسم إنهاء؛ الشراكة: حق الشيفرة بشرط'),
+        ('الوقت حتى القيمة', 2, 5, 4, '10 أشهر، 4 أشهر، 6 أشهر'),
+    ])
     write_text('portfolio_budget.txt', f"""
 الموازنة الثابتة للمحفظة (بآلاف الريالات): {BUDGET_TOTAL:,} على ثلاث سنوات، وسقف كل سنة: {BUDGET_YEAR_CAP[0]:,} ثم {BUDGET_YEAR_CAP[1]:,} ثم {BUDGET_YEAR_CAP[2]:,}.
 الآفاق: الأفق 1 من الشهر 0 إلى 6؛ الأفق 2 من 7 إلى 18؛ الأفق 3 من 19 إلى 36.
